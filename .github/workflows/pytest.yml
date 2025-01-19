@@ -20,7 +20,7 @@ jobs:
         pip install -r requirements.txt
         pip install pytest
         pip install pytest-django
-        pip install django-celery-beat
+        pip install pytest-cov
     - name: Run test
       run: |
         pytest -v store/tests
