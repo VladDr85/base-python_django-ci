@@ -4,7 +4,7 @@ from store.models import Product, Category
 
 
 class ProductForm(forms.ModelForm):
-    class Meta:
+    class Meta: # pylint: disable=too-few-public-methods
         model = Product
         fields = ['name', 'description', 'price', 'category']
         labels = {
@@ -56,7 +56,7 @@ class ProductForm(forms.ModelForm):
         return price
 
     def clean(self):
-        cleaned_data = super(ProductForm, self).clean()
+        cleaned_data = super().clean()
         description = cleaned_data.get("description")
         forbidden_words = ['сигареты', 'вино', 'наркотик']
         if description:
@@ -66,7 +66,7 @@ class ProductForm(forms.ModelForm):
 
 
 class CategoryForm(forms.ModelForm):
-    class Meta:
+    class Meta: # pylint: disable=too-few-public-methods
         model = Category
         fields = ['name', 'description']
         labels = {
@@ -100,7 +100,7 @@ class CategoryForm(forms.ModelForm):
         return description
 
     def clean(self):
-        cleaned_data = super(CategoryForm, self).clean()
+        cleaned_data = super().clean()
         forbidden_words = ['сигареты', 'вино', 'наркотик', 'алкоголь']
 
         description = cleaned_data.get("description")
