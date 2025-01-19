@@ -5,3 +5,4 @@ disable=
     C0115, # Missing class docstring (missing-class-docstring)
     E1101, # Class '' has no '' member (no-member)
     R0901, # Too many ancestors (10/7) (too-many-ancestors)
+    C0415, # Import outside toplevel (django.core.management.execute_from_command_line) (import-outside-toplevel)
