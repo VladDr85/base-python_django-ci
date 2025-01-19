@@ -22,4 +22,4 @@ jobs:
         pip install pytest-django
     - name: Run test
       run: |
-        pytest -v store/tests
+        pytest -s --cov --cov-report html --cov-fail-under 85
