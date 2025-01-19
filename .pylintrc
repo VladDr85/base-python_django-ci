@@ -4,4 +4,4 @@ disable=
     C0116, # Missing function or method docstring (missing-function-docstring)
     C0115, # Missing class docstring (missing-class-docstring)
     E1101, # Class '' has no '' member (no-member)
-
+    R0901, # Too many ancestors (10/7) (too-many-ancestors)
