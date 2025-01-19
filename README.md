@@ -4,6 +4,7 @@
 - Заполнить тестовыми данными: ``` python manage.py loaddata store/fixtures/store_fixture.json ```
 - Запуск приложения: ``` python manage.py runserver ```
 - Запуск всех тестов: ``` pytest -v store/tests ```
+- Запуск PyLint для Windows: ``` pylint $(git ls-files '*.py' | Where-Object { $_ -notmatch '^(store/tests|store/migrations|store/management)/' }) ```
 - SuperUser: `admin/admin`
 - Установка Redis через Docker: 
   - docker run --name redis -d -p 6379:6379 redis
