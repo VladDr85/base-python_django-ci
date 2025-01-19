@@ -1,7 +1,7 @@
+import time
 from celery import shared_task
 from celery.result import AsyncResult
 from django.core.mail import send_mail
-import time
 
 from store.models import Product
 
