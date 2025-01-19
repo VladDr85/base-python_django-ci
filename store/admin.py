@@ -34,7 +34,10 @@ class ProductAdmin(admin.ModelAdmin):
         for product in queryset:
             product.price = round(product.price * 0.9) - 0.01
             product.save()
-        self.message_user(request, f'Сделали скидку на 10% и выставили красивую цену у {queryset.count()} продуктов')
+        self.message_user(
+            request,
+            f'Сделали скидку на 10% и выставили красивую цену у {queryset.count()} продуктов'
+        )
 
     @admin.action(description='Наценка в 10%% и Красивая цена')
     def markup_ten_beautiful_price(self, request, queryset):
